@@ -20,6 +20,6 @@ namespace GeneralStoreAPI_Demo.Controllers
 
         //Put{id}
 
-        //Delete{id}
+        //Delete{id} make change here
     }
 }
