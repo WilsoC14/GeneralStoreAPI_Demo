@@ -10,7 +10,7 @@ namespace GeneralStoreAPI_Demo.Models
     {
         public StoreDbContext() : base("DefaultConnection")
         {
-
+            //asdfdsdf dont do this at home
         }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Product> Products { get; set; }
