@@ -46,10 +46,10 @@ namespace GeneralStoreAPI_Demo.Controllers
 
         //Get{id}
 
-        public IHttpActionResult Get(int id)
+        public IHttpActionResult Get(string sku)
         {
 
-            Transaction transaction = _context.Transactions.Find(id);
+            Transaction transaction = _context.Transactions.Find(sku);
             if (transaction == null)
             {
                 return NotFound();

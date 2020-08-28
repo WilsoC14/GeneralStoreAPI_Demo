@@ -84,7 +84,7 @@ namespace GeneralStoreAPI_Demo.Controllers
             _context.Customers.Remove(customer);
             if(_context.SaveChanges() == 1)
             {
-                return Ok("Customer Delete");
+                return Ok("Customer Deleted");
             }
             return InternalServerError();
         }
