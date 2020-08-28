@@ -9,6 +9,7 @@ namespace GeneralStoreAPI_Demo.Models
 {
     public class Transaction
     {
+        
         [Key]
         public int Id { get; set; }
 
@@ -23,9 +24,11 @@ namespace GeneralStoreAPI_Demo.Models
         public virtual Product Product { get; set; }
 
         [Required]
-        public int ItemCount { get; set; } 
-
+        public int ItemCount { get; set; }
+        
         [Required]
-        public DateTime DateOfTransaction { get; set; }
+        public double UpChargePercentage { get; set; }
+
+
     }
 }

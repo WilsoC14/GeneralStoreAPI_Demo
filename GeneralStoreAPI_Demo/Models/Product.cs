@@ -16,17 +16,5 @@ namespace GeneralStoreAPI_Demo.Models
         public double Cost { get; set; }
         [Required]
         public int NumberInInventory { get; set; }
-        public bool IsInStock
-        {
-            get
-            {
-                if (NumberInInventory > 0)
-                    return true;
-                else
-                    return false;
-            }
-        }
-
-
     }
 }
