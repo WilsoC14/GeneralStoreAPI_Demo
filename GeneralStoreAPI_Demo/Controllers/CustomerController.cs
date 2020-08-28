@@ -44,9 +44,9 @@ namespace GeneralStoreAPI_Demo.Controllers
         //Get{id} -- Read By ID
         public IHttpActionResult Get(int id)
         {
-                      
+
             Customer customer = _context.Customers.Find(id);
-            if(customer == null)
+            if (customer == null)
             {
                 return NotFound();
             }
@@ -57,7 +57,36 @@ namespace GeneralStoreAPI_Demo.Controllers
 
 
         //Put{id} -- Update By ID
-
+        public IHttpActionResult Put([FromUri]int id, [FromBody]Customer newCustomer)
+        {
+            if (ModelState.IsValid)
+            {
+                Customer customer = _context.Customers.Find(id);
+                if (customer != null)
+                {
+                    customer.FirstName = newCustomer.FirstName;
+                    customer.LastName = newCustomer.LastName;
+                    _context.SaveChanges();
+                    return Ok("Customer Updated");
+                }
+                return NotFound();
+            }
+            return BadRequest(ModelState);
+        }
         //Delete{id} -- Delete By ID
+        public IHttpActionResult Delete(int id)
+        {
+            Customer customer = _context.Customers.Find(id);
+                if(customer == null)
+            {
+                return NotFound();
+            }
+            _context.Customers.Remove(customer);
+            if(_context.SaveChanges() == 1)
+            {
+                return Ok("Customer Delete");
+            }
+            return InternalServerError();
+        }
     }
 }
