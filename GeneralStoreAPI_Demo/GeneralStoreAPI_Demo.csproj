@@ -190,6 +190,10 @@
     <Compile Include="Migrations\202008282106544_RevertedToVanilla.designer.cs">
       <DependentUpon>202008282106544_RevertedToVanilla.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202008282158334_RemovedUpChargePercentage.cs" />
+    <Compile Include="Migrations\202008282158334_RemovedUpChargePercentage.designer.cs">
+      <DependentUpon>202008282158334_RemovedUpChargePercentage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Product.cs" />
@@ -295,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202008282106544_RevertedToVanilla.resx">
       <DependentUpon>202008282106544_RevertedToVanilla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202008282158334_RemovedUpChargePercentage.resx">
+      <DependentUpon>202008282158334_RemovedUpChargePercentage.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -25,10 +25,5 @@ namespace GeneralStoreAPI_Demo.Models
 
         [Required]
         public int ItemCount { get; set; }
-        
-        [Required]
-        public double UpChargePercentage { get; set; }
-
-
     }
 }
